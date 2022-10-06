@@ -16,7 +16,6 @@ const Moria = ({token}) => {
             if (userToken) {
                 const userData = await validate(userToken);
                 if (userData){
-                    console.log(userData)
                     setuserDetails(userData['message']);
                     sessionStorage.setItem('k',JSON.stringify(userData['k']));
                 } else {
@@ -37,8 +36,8 @@ const Moria = ({token}) => {
             <div>
             <div  className=" flex w-full justify-center items-center relative bg-gradient-to-r from-slate-500 to-blue-900">
             <img src={gandalf}  alt="" className="w-13 object-top cursor-pointer"/>
-                    <h1 className="italic text-3xl sm:text-3xl text-white text-gradient  py-4">
-                    Hello Traveler {userDetails}! 
+                    <h1 className="italic text-3xl sm:text-3xl text-white text-gradient">
+                    Hello {userDetails}! 
                     </h1>
             </div>
             <Footer />

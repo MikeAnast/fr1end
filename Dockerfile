@@ -4,8 +4,9 @@ RUN apt update && apt install -y supervisor && apt install -y nginx
 
 COPY . /app
 COPY ./lotr/build/ /var/www/html
-# RUN rm /etc/nginx/nginx.conf
-# COPY nginx.conf /etc/nginx/
+
+RUN rm /etc/nginx/sites-available/default
+COPY /nginx/default /etc/nginx/sites-available/
 
 WORKDIR /app/server/
 RUN npm i

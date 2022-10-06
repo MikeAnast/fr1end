@@ -16,7 +16,6 @@ const users = [
         username: 'Gandalf',
         password: 'Mellon',
         role: 'admin'
-    }, {
     }
 ];
 
@@ -56,7 +55,6 @@ app.post('/validate', function (req, res) {
         } catch(err) {
             key = 'key not found'
     }
-
     try {
         const decoded = jwt.verify(token,key);
     } catch(e) {
@@ -70,6 +68,6 @@ app.post('/validate', function (req, res) {
     });
 });
 
-app.listen(4000, function () {
+app.listen(4000,'0.0.0.0', function () {
   console.log('App listening on port 4000!');
 });

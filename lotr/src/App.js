@@ -18,7 +18,6 @@ const App = () => {
             <Route path='/' element={<Login setToken={setToken} />} />
             <Route path='/moria' element={<Moria token={token} />} />
             <Route path='/footer' element={<Footer />} />
-
           </Routes>
         </BrowserRouter>
       </div>

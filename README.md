@@ -11,3 +11,4 @@ A web hackthebox-style challenge, try to find the flag.
 ```bash
 docker run -p 5000:5000 -t --name pentest pentestool-image
 ```
+Have fun !
